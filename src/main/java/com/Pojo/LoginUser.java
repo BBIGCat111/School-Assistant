@@ -1,9 +1,5 @@
 package com.Pojo;
 
-import com.oracle.webservices.internal.api.databinding.DatabindingMode;
-import org.springframework.stereotype.Component;
-
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Controller;
 
 @Controller
