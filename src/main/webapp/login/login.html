@@ -21,12 +21,10 @@
                     type: "post",
                     url: "http://localhost:8080/project_war_exploded/user/login",
                     dataType: "json",
-                    async: false,
                     data: {username: name, password: pwd},
                     success: function (res) {
                         if(res.code == 0){
                             window.location.href = "../Home/Home.html"
-                            $.cookie("stu_id", "2220161451", {expires : 1, path : '/'})
                         }
                         else{
                             alert("密码错误!")

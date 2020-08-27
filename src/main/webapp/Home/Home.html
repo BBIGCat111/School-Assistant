@@ -6,9 +6,9 @@
     <script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script type="text/javascript">
-        function requestJson(){
+        $(document).ready(function() {
                 $.ajax({
-                    type: "get",
+                    type: "post",
                     url: "http://localhost:8080/project_war_exploded/home.do",
                     dataType: "json",
                     success: function (res) {
@@ -44,11 +44,11 @@
                         alert("进入错误界面")
                     }
                 });
-        }
+        })
     </script>
 
 </head>
-<body onload="requestJson()">
+<body>
 <div id="wrapper">
     <h1>课程表</h1>
 
