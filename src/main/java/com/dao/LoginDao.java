@@ -8,7 +8,7 @@ import java.util.List;
 
 @Repository
 public interface LoginDao {
-    //返回所有用户数据
+    //返回所有登录数据
     @Select("select * from login")
     public List<LoginUser> findAllUser();
 }
