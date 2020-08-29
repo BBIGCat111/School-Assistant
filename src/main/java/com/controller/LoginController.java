@@ -16,15 +16,14 @@ import java.util.List;
 
 //注册、登录控制器
 @Controller
-@RequestMapping("/user")
 public class LoginController {
     @Autowired
     private LoginService loginService;
 
     //登录
-    @RequestMapping(value = "/login")
+    @RequestMapping("/login")
     @ResponseBody
-    public ServerResponse<LoginUser> findAllUser(String username, String password){
+    public ServerResponse<LoginUser> findAllUser(@RequestParam("username") String username, @RequestParam("password") String password){
         //设置sesson
         RequestAttributes ra = RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = ((ServletRequestAttributes)ra).getRequest();
