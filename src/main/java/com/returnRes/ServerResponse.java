@@ -1,7 +1,4 @@
-package com.Return;
-
-import com.Return.ResponseCode;
-import org.springframework.stereotype.Component;
+package com.returnRes;
 
 public class ServerResponse<T> {
     private int code;

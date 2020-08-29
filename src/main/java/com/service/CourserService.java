@@ -1,6 +1,6 @@
-package com.Service;
+package com.service;
 
-import com.Pojo.Course;
+import com.pojo.Course;
 
 public interface CourserService {
     public Course showCourse(String stu_id);

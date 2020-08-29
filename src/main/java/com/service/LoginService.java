@@ -1,6 +1,6 @@
-package com.Service;
+package com.service;
 
-import com.Pojo.LoginUser;
+import com.pojo.LoginUser;
 
 import java.util.List;
 

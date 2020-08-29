@@ -1,8 +1,8 @@
-package com.Controller;
+package com.controller;
 
-import com.Pojo.LoginUser;
-import com.Service.LoginService;
-import com.Return.ServerResponse;
+import com.pojo.LoginUser;
+import com.service.LoginService;
+import com.returnRes.ServerResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +12,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
 import java.util.List;
 
 //注册、登录控制器

@@ -1,8 +1,8 @@
-package com.Service.LoginServiceImpl;
+package com.service.loginServiceImpl;
 
-import com.Service.LoginService;
-import com.Pojo.LoginUser;
-import com.Dao.LoginDao;
+import com.service.LoginService;
+import com.pojo.LoginUser;
+import com.dao.LoginDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

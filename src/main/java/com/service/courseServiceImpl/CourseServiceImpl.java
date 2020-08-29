@@ -1,8 +1,8 @@
-package com.Service.CourseServiceImpl;
+package com.service.courseServiceImpl;
 
-import com.Pojo.Course;
-import com.Service.CourserService;
-import com.Dao.CourseDao;
+import com.pojo.Course;
+import com.service.CourserService;
+import com.dao.CourseDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,12 +1,11 @@
-package com.Controller;
+package com.controller;
 
-import com.Pojo.Course;
-import com.Service.CourserService;
-import com.Return.ServerResponse;
+import com.pojo.Course;
+import com.service.CourserService;
+import com.returnRes.ServerResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -20,7 +19,7 @@ public class CourseController {
     private CourserService courserService;
 
     //显示课表
-    @RequestMapping("/home.do")
+    @RequestMapping("/course.do")
     @ResponseBody
     public ServerResponse<Course> showCourse(){
         System.out.println("进入控制台");

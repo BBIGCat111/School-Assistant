@@ -1,6 +1,6 @@
-package com.Dao;
+package com.dao;
 
-import com.Pojo.LoginUser;
+import com.pojo.LoginUser;
 import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 

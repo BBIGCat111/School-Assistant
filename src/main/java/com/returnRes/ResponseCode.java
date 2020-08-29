@@ -1,4 +1,4 @@
-package com.Return;
+package com.returnRes;
 
 public enum  ResponseCode {
     SUCCESS(0, "Login Success"),
