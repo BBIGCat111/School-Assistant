@@ -25,6 +25,10 @@ public class ServerResponse<T> {
         return data;
     }
 
+    public static <T> ServerResponse<T> createResponse(int code, String info, T data){
+        return new ServerResponse<T>(code, info, data);
+    }
+
     public static <T> ServerResponse<T> createSuccessResponse(T data){
         return new ServerResponse<T>(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getInfo(), data);
     }
@@ -35,6 +39,10 @@ public class ServerResponse<T> {
 
     public static <T> ServerResponse<T> createCourseResponse(T data){
         return new ServerResponse<T>(ResponseCode.COURSE.getCode(), ResponseCode.COURSE.getInfo(), data);
+    }
+
+    public static <T> ServerResponse<T> createUserResponse(T data){
+        return new ServerResponse<T>(ResponseCode.USER.getCode(), ResponseCode.USER.getInfo(), data);
     }
 
 }
