@@ -4,6 +4,7 @@ public enum  ResponseCode {
     SUCCESS(0, "Login Success"),
     FAILURE(-1, "Login Fail"),
     COURSE(100, "Show Course"),
+    USER(200, "Get User")
     ;
 
     private int code;
