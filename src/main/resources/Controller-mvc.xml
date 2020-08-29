@@ -10,12 +10,6 @@
 
     <mvc:annotation-driven/>
 
-    <!-- 视图解析器 -->
-    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
-        <property name="prefix" value="/pages/"/>
-        <property name="suffix" value=".jsp"/>
-    </bean>
-
     <!-- 映射所有静态资源文件 -->
     <mvc:default-servlet-handler/>
 
