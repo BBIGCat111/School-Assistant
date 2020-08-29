@@ -22,14 +22,12 @@ public class CourseController {
     @RequestMapping("/course.do")
     @ResponseBody
     public ServerResponse<Course> showCourse(){
-        System.out.println("进入控制台");
-
         //获取sesson
         RequestAttributes ra = RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = ((ServletRequestAttributes)ra).getRequest();
         String stu_id = (String) request.getSession(true).getAttribute("stu_id");
 
-        System.out.println("sesson中的stu_id : " + stu_id);
+        //System.out.println("sesson中的stu_id : " + stu_id);
         return ServerResponse.createCourseResponse(courserService.showCourse(stu_id));
     }
 }
