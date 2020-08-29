@@ -16,7 +16,27 @@
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
     <!-- Google Fonts-->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css"> 
+    <link rel="stylesheet" href="assets/js/Lightweight-Chart/cssCharts.css">
+
+	<script src="https://cdn.staticfile.org/jquery/3.4.0/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$.ajax({
+				type: "post",
+				url: "http://localhost:8080/project_war_exploded/user.co",
+				dataType: "json",
+				success: function (res) {
+					if(res.code == 200){
+						$("#stu_id").text(res.data.stu_id)
+						$("#stu_name").text(res.data.stu_name)
+						$("#stu_profess").text(res.data.stu_profess)
+						$("#stu_class").text(res.data.stu_class)
+					}
+				}
+			});
+		})
+	</script>
 </head>
 
 <body>
@@ -29,29 +49,38 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand waves-effect waves-dark" href="index.html"><i class="large material-icons">track_changes</i> <strong>target</strong></a>
+                <a class="navbar-brand waves-effect waves-dark" href="index.html"><i class="large material-icons">track_changes</i> <strong>学生助手</strong></a>
 				
 		<div id="sideNav" href=""><i class="material-icons dp48">toc</i></div>
             </div>
 
-            <ul class="nav navbar-top-links navbar-right"> 
+
+            <ul class="nav navbar-top-links navbar-right">
+				<!--
 				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown4"><i class="fa fa-envelope fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>				
 				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown3"><i class="fa fa-tasks fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
 				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown2"><i class="fa fa-bell fa-fw"></i> <i class="material-icons right">arrow_drop_down</i></a></li>
-				  <li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b>John Doe</b> <i class="material-icons right">arrow_drop_down</i></a></li>
+				-->
+				<li><a class="dropdown-button waves-effect waves-dark" href="#!" data-activates="dropdown1"><i class="fa fa-user fa-fw"></i> <b></b> <i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </nav>
+
+
 		<!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
-<li><a href="#"><i class="fa fa-user fa-fw"></i> My Profile</a>
+<li><a href="#"><i class="fa fa-user fa-fw"></i>个人信息</a>
 </li>
-<li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-</li> 
+<li><a href="#"><i class="fa fa-gear fa-fw"></i>设置</a>
+</li>
+<!--
 <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
 </li>
+-->
 </ul>
+
+		<!--
 <ul id="dropdown2" class="dropdown-content w250">
-  <li>
+  						<li>
                                 <div>
                                     <i class="fa fa-comment fa-fw"></i> New Comment
                                     <span class="pull-right text-muted small">4 min</span>
@@ -98,6 +127,8 @@
                             </a>
                         </li>
 </ul>
+
+
 <ul id="dropdown3" class="dropdown-content dropdown-tasks w250">
 <li>
 		<a href="#">
@@ -206,15 +237,18 @@
                                 <i class="fa fa-angle-right"></i>
                             </a>
                         </li>
-</ul>  
+</ul>
+-->
+
 	   <!--/. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a class="active-menu waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i> Dashboard</a>
+                        <a class="active-menu waves-effect waves-dark" href="index.html"><i class="fa fa-dashboard"></i>主页</a>
                     </li>
+					<!--
                     <li>
                         <a href="ui-elements.html" class="waves-effect waves-dark"><i class="fa fa-desktop"></i> UI Elements</a>
                     </li>
@@ -263,100 +297,124 @@
                     <li>
                         <a href="empty.html" class="waves-effect waves-dark"><i class="fa fa-fw fa-file"></i> Empty Page</a>
                     </li>
+                    -->
                 </ul>
+
 
             </div>
 
         </nav>
         <!-- /. NAV SIDE  -->
-      
+
+
 		<div id="page-wrapper">
+
+
 		  <div class="header"> 
                         <h1 class="page-header">
-                            Dashboard
+                            主页
                         </h1>
+
+			         <!--
 						<ol class="breadcrumb">
 					  <li><a href="#">Home</a></li>
 					  <li><a href="#">Dashboard</a></li>
 					  <li class="active">Data</li>
 					</ol> 
-									
+					-->
+
 		</div>
+
+
             <div id="page-inner">
 
 			<div class="dashboard-cards"> 
                 <div class="row">
+
                     <div class="col-xs-12 col-sm-6 col-md-3">
-					
+
 						<div class="card horizontal cardIcon waves-effect waves-dark">
+						<!--
 						<div class="card-image red">
 						<i class="material-icons dp48">import_export</i>
 						</div>
+						-->
 						<div class="card-stacked red">
 						<div class="card-content">
-						<h3>84,198</h3> 
+						<h3>学号</h3>
 						</div>
 						<div class="card-action">
-						<strong>REVENUE</strong>
+						<strong id="stu_id"></strong>
 						</div>
 						</div>
 						</div>
-	 
+
                     </div>
+
                     <div class="col-xs-12 col-sm-6 col-md-3">
-					
+
 						<div class="card horizontal cardIcon waves-effect waves-dark">
+						<!--
 						<div class="card-image orange">
 						<i class="material-icons dp48">shopping_cart</i>
 						</div>
+						-->
 						<div class="card-stacked orange">
 						<div class="card-content">
-						<h3>36,540</h3> 
+						<h3>姓名</h3>
 						</div>
 						<div class="card-action">
-						<strong>SALES</strong>
+						<strong id="stu_name"></strong>
 						</div>
 						</div>
-						</div> 
+						</div>
+
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3">
-					
-							<div class="card horizontal cardIcon waves-effect waves-dark">
+
+						<div class="card horizontal cardIcon waves-effect waves-dark">
+						<!--
 						<div class="card-image blue">
 						<i class="material-icons dp48">equalizer</i>
 						</div>
+						-->
 						<div class="card-stacked blue">
 						<div class="card-content">
-						<h3>24,225</h3> 
+						<h3>专业</h3>
 						</div>
 						<div class="card-action">
-						<strong>PRODUCTS</strong>
+						<strong id="stu_profess"></strong>
 						</div>
 						</div>
 						</div> 
-						 
+
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3">
-					
-					<div class="card horizontal cardIcon waves-effect waves-dark">
+
+						<div class="card horizontal cardIcon waves-effect waves-dark">
+						<!--
 						<div class="card-image green">
 						<i class="material-icons dp48">supervisor_account</i>
 						</div>
+						-->
 						<div class="card-stacked green">
 						<div class="card-content">
-						<h3>88,658</h3> 
+						<h3>班级</h3>
 						</div>
 						<div class="card-action">
-						<strong>VISITS</strong>
+						<strong id="stu_class"></strong>
 						</div>
 						</div>
 						</div> 
-						 
+
                     </div>
                 </div>
 			   </div>
-				<!-- /. ROW  --> 
+
+				<!-- /. ROW  -->
+
 				<div class="row">
+					<!--
 					<div class="col-xs-12 col-sm-12 col-md-7"> 
 					<div class="cirStats">
 						  	<div class="row">
@@ -387,10 +445,14 @@
 											<div class="easypiechart" id="easypiechart-orange" data-percent="55" ><span class="percent">55%</span>
 											</div>
 										</div>
-								</div>  
+								</div>
 							</div>
 						</div>							
-						</div><!--/.row-->
+						</div>
+						-->
+
+						<!--/.row-->
+						<!--
 						<div class="col-xs-12 col-sm-12 col-md-5"> 
 						     <div class="row">
 									<div class="col-xs-12"> 
@@ -404,12 +466,15 @@
 									</div>	
 								</div>
 							 </div>
-						</div><!--/.row-->
+						</div>
+					-->
+					<!--/.row-->
 					</div>
-					
-		 
+
+
 				<div class="row">
-				<div class="col-md-5"> 
+					<!--
+					<div class="col-md-5">
 						<div class="card">
 						<div class="card-image">
 						 <div id="morris-line-chart"></div>
@@ -418,10 +483,10 @@
 						  <b>Line Chart</b>
 						</div>
 						</div>
-		  
-					</div>		
-					
-						<div class="col-md-7"> 
+		  			-->
+					</div>
+					<!--
+					<div class="col-md-7">
 					<div class="card">
 					<div class="card-image">
 					  <div id="morris-bar-chart"></div>
@@ -431,12 +496,13 @@
 					</div>
 					</div>					
 					</div>
-					
+					-->
 				</div> 
-			 
+
 				
 				
                 <div class="row">
+					<!--
                     <div class="col-xs-12">
 						<div class="card">
 					<div class="card-image">
@@ -447,12 +513,12 @@
 					</div>
 					</div>	 
                     </div> 
-
+					-->
                 </div>
 				<div class="row">
 				<div class="col-md-12">
 				
-					</div>		
+					</div>
 				</div> 	
                 <!-- /. ROW  -->
 
@@ -461,6 +527,7 @@
 				
 				
                 <div class="row">
+					<!--
                     <div class="col-md-4 col-sm-12 col-xs-12">
 						<div class="card"><div class="card-action">
 					  <b>Tasks Panel</b>
@@ -476,11 +543,12 @@
 							   <a href="#!" class="collection-item">Custom Badge Captions<span class="new badge" data-badge-caption="custom caption">4</span></a>
 							<a href="#!" class="collection-item">Custom Badge Captions<span class="badge" data-badge-caption="custom caption">4</span></a>
 						</div>
-					</div> 
-					
-					</div>	  
+					</div>
 
+					</div>
                     </div>
+					-->
+					<!--
                     <div class="col-md-8 col-sm-12 col-xs-12">
 	<div class="card">
 	<div class="card-action">
@@ -527,8 +595,11 @@
                        
 
                     </div>
+					-->
+
                 </div>
                 <!-- /. ROW  -->
+			<!--
 			   <div class="fixed-action-btn horizontal click-to-toggle">
     <a class="btn-floating btn-large red">
       <i class="material-icons">menu</i>
@@ -540,11 +611,13 @@
       <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
     </ul>
   </div>
-		
+		-->
+			<!--
 				<footer><p>All right reserved. Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p>
 				
         
 				</footer>
+				-->
             </div>
             <!-- /. PAGE INNER  -->
         </div>

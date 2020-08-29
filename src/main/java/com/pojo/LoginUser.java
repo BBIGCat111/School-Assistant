@@ -2,7 +2,7 @@ package com.pojo;
 
 import org.springframework.stereotype.Controller;
 
-@Controller
+
 public class LoginUser {
     private String stu_id;
     private String stu_name;

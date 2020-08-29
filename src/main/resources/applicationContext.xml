@@ -36,9 +36,8 @@
         </bean>
 
 
-        <bean class="org.springframework.http.converter.StringHttpMessageConverter"></bean>
-        <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"></bean>
-
-
+        <bean id="user" class="com.pojo.User"></bean>
+        <bean id="loginUser" class="com.pojo.LoginUser"></bean>
+        <bean id="course" class="com.pojo.Course"></bean>
 
 </beans>
