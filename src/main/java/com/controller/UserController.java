@@ -21,14 +21,14 @@ public class UserController {
     @RequestMapping("/user.co")
     @ResponseBody
     public ServerResponse<User> getUserById(){
-        System.out.println("进入UserController");
+        //System.out.println("进入UserController");
 
         //获取sesson
         RequestAttributes ra = RequestContextHolder.getRequestAttributes();
         HttpServletRequest request = ((ServletRequestAttributes)ra).getRequest();
         String stu_id = (String) request.getSession(true).getAttribute("stu_id");
 
-        System.out.println("stu_id : " + stu_id);
+        //System.out.println("stu_id : " + stu_id);
 
         User user = userService.getUserById(stu_id);
         return ServerResponse.createUserResponse(user);

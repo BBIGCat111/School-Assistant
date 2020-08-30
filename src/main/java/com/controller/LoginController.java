@@ -31,7 +31,7 @@ public class LoginController {
 
         List<LoginUser> list = loginService.findAllUser();
         for(LoginUser u : list){
-            System.out.println(u.toString());
+            //System.out.println(u.toString());
             if(username.equals(u.getUsername()) && password.equals(u.getPassword())){
                 return ServerResponse.createSuccessResponse(u);      //登录成功
             }
