@@ -39,5 +39,6 @@
         <bean id="user" class="com.pojo.User"></bean>
         <bean id="loginUser" class="com.pojo.LoginUser"></bean>
         <bean id="course" class="com.pojo.Course"></bean>
+        <bean id="memoryData" class="com.pojo.MemoryData"></bean>
 
 </beans>
