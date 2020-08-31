@@ -45,4 +45,7 @@ public class ServerResponse<T> {
         return new ServerResponse<T>(ResponseCode.USER.getCode(), ResponseCode.USER.getInfo(), data);
     }
 
+    public static <T> ServerResponse<T> createMemoryResponse(T data){
+        return new ServerResponse<T>(ResponseCode.MEMORY.getCode(), ResponseCode.MEMORY.getInfo(), data);
+    }
 }
