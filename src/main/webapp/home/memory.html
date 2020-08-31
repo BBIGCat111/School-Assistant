@@ -44,7 +44,8 @@
                 data: {newMemoryData : newMemoryData},
                 success: function (res) {
                     if(res.code == 300){
-                        $("#newMemoryData").text(res.data.memoryData)
+                        //$("#newMemoryData").text(res.data.memoryData)
+                        window.location.href = "memory.html"
                     }
                 }
             });
