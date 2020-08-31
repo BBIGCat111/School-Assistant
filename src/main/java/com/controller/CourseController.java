@@ -27,7 +27,6 @@ public class CourseController {
         HttpServletRequest request = ((ServletRequestAttributes)ra).getRequest();
         String stu_id = (String) request.getSession(true).getAttribute("stu_id");
 
-        //System.out.println("sesson中的stu_id : " + stu_id);
         return ServerResponse.createCourseResponse(courserService.showCourse(stu_id));
     }
 }
