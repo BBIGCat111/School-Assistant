@@ -64,6 +64,14 @@
       <param-value>classpath:Controller-mvc.xml</param-value>
     </init-param>
   </servlet>
+  <servlet>
+    <servlet-name>UserInfoController</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:Controller-mvc.xml</param-value>
+    </init-param>
+  </servlet>
   
   <servlet-mapping>
     <servlet-name>LoginController</servlet-name>
@@ -80,6 +88,10 @@
   <servlet-mapping>
     <servlet-name>MemoryController</servlet-name>
     <url-pattern>/.eo</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UserInfoController</servlet-name>
+    <url-pattern>/.fo</url-pattern>
   </servlet-mapping>
 
 </web-app>
