@@ -26,30 +26,18 @@
         $(document).ready(function () {
             $.ajax({
                 type: "post",
-                url: "http://localhost:8080/project_war_exploded/memory.eo",
+                url: "http://localhost:8080/project_war_exploded/user.co",
                 dataType: "json",
                 success: function (res) {
-                    if(res.code == 300){
-                        $("#newMemoryData").text(res.data.memoryData)
+                    if(res.code == 200){
+                        $("#stu_id").text(res.data.stu_id)
+                        $("#stu_name").text(res.data.stu_name)
+                        $("#stu_profess").text(res.data.stu_profess)
+                        $("#stu_class").text(res.data.stu_class)
                     }
                 }
             });
         })
-        function requestJson () {
-            var newMemoryData = $("#newMemoryData").val()
-            $.ajax({
-                type: "post",
-                url: "http://localhost:8080/project_war_exploded/memory.eo",
-                dataType: "json",
-                data: {newMemoryData : newMemoryData},
-                success: function (res) {
-                    if(res.code == 300){
-                        //$("#newMemoryData").text(res.data.memoryData)
-                        window.location.href = "memory.html"
-                    }
-                }
-            });
-        }
     </script>
 
 </head>
@@ -260,13 +248,13 @@
             <ul class="nav" id="main-menu">
 
                 <li>
-                    <a href="home.html" class="waves-effect waves-dark"><i class="fa fa-dashboard"></i> 主页</a>
+                    <a href="home.html" class="active-menu waves-effect waves-dark"><i class="fa fa-dashboard"></i> 主页</a>
                 </li>
                 <li>
                     <a href="course.html" class="waves-effect waves-dark"><i class="fa fa-table"></i> 课程表</a>
                 </li>
                 <li>
-                    <a href="memory.html" class="active-menu waves-effect waves-dark"><i class="fa fa-fw fa-file"></i> 备忘录</a>
+                    <a href="memory.html" class="waves-effect waves-dark"><i class="fa fa-fw fa-file"></i> 备忘录</a>
                 </li>
                 <!--
                 <li>
@@ -279,6 +267,9 @@
                     <a href="tab-panel.html" class="waves-effect waves-dark"><i class="fa fa-qrcode"></i> Tabs & Panels</a>
                 </li>
 
+                <li>
+                    <a href="table.html" class="waves-effect waves-dark"><i class="fa fa-table"></i> Responsive Tables</a>
+                </li>
                 <li>
                     <a href="form.html" class="waves-effect waves-dark"><i class="fa fa-edit"></i> Forms </a>
                 </li>
@@ -315,6 +306,7 @@
                     <a class="active-menu waves-effect waves-dark" href="empty.html"><i class="fa fa-fw fa-file"></i> Empty Page</a>
                 </li>
                 -->
+
             </ul>
 
         </div>
@@ -324,7 +316,7 @@
     <div id="page-wrapper">
         <div class="header">
             <h1 class="page-header">
-                备忘录
+                主页
             </h1>
             <!--
             <ol class="breadcrumb">
@@ -337,40 +329,69 @@
         </div>
         <div id="page-inner">
 
-            <div class="row">
+            <div class="dashboard-cards">
+                <div class="row">
 
-                <div class="col-md-12">
-                    <div class="card">
-                        <!--
-                        <div class="card-action">
-                            Empty Page
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+
+                        <div class="card horizontal cardIcon waves-effect waves-dark">
+                            <div class="card-stacked red">
+                                <div class="card-content">
+                                    <h3>学号</h3>
+                                </div>
+                                <div class="card-action">
+                                    <strong id="stu_id"></strong>
+                                </div>
+                            </div>
                         </div>
-                        -->
-
-
-
-                        <div class="card-content" >
-                            <form method="post">
-                                <textarea id="newMemoryData" style="width:1160px;height:500px;">
-
-                                </textarea>
-                                <!--
-                                class="btn btn-primary btn-block btn-large"
-                                -->
-                                <input value="更新备忘录" type="button" class="btn" onclick="requestJson()">
-                            </form>
-                        </div>
-
 
                     </div>
 
-                    <!--
-                    <footer><p>All right reserved. Template by: <a href="https://webthemez.com/admin-template/">WebThemez.com</a></p></footer>
-                    -->
+                    <div class="col-xs-12 col-sm-6 col-md-3">
 
+                        <div class="card horizontal cardIcon waves-effect waves-dark">
+                            <div class="card-stacked orange">
+                                <div class="card-content">
+                                    <h3>姓名</h3>
+                                </div>
+                                <div class="card-action">
+                                    <strong id="stu_name"></strong>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+
+                        <div class="card horizontal cardIcon waves-effect waves-dark">
+                            <div class="card-stacked blue">
+                                <div class="card-content">
+                                    <h3>专业</h3>
+                                </div>
+                                <div class="card-action">
+                                    <strong id="stu_profess"></strong>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-3">
+
+                        <div class="card horizontal cardIcon waves-effect waves-dark">
+                            <div class="card-stacked green">
+                                <div class="card-content">
+                                    <h3>班级</h3>
+                                </div>
+                                <div class="card-action">
+                                    <strong id="stu_class"></strong>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <!-- /. PAGE INNER  -->
             </div>
+
             <!-- /. PAGE WRAPPER  -->
         </div>
         <!-- /. WRAPPER  -->
