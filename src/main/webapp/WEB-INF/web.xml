@@ -49,7 +49,7 @@
     </init-param>
   </servlet>
   <servlet>
-    <servlet-name>UserController</servlet-name>
+    <servlet-name>HomeController</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
@@ -74,7 +74,7 @@
     <url-pattern>/.do</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
-    <servlet-name>UserController</servlet-name>
+    <servlet-name>HomeController</servlet-name>
     <url-pattern>/.co</url-pattern>
   </servlet-mapping>
   <servlet-mapping>
