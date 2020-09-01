@@ -14,14 +14,13 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletRequest;
 
 @Controller
-public class UserController {
+public class HomeController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/user.co")
+    @RequestMapping("/home.co")
     @ResponseBody
     public ServerResponse<User> getUserById(){
-        //System.out.println("进入UserController");
 
         //获取sesson
         RequestAttributes ra = RequestContextHolder.getRequestAttributes();
@@ -31,6 +30,7 @@ public class UserController {
         //System.out.println("stu_id : " + stu_id);
 
         User user = userService.getUserById(stu_id);
+
         return ServerResponse.createUserResponse(user);
     }
 }
