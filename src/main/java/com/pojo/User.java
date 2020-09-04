@@ -4,7 +4,7 @@ public class User {
     private String stu_id;
     private String stu_name;
     private String stu_sex;
-    private Integer stu_age;
+    private String stu_age;
     private String stu_political;
     private String stu_address;
     private String stu_profess;
@@ -36,11 +36,11 @@ public class User {
         this.stu_sex = stu_sex;
     }
 
-    public Integer getStu_age() {
+    public String getStu_age() {
         return stu_age;
     }
 
-    public void setStu_age(Integer stu_age) {
+    public void setStu_age(String stu_age) {
         this.stu_age = stu_age;
     }
 
