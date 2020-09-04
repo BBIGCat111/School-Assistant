@@ -5,6 +5,7 @@ public enum  ResponseCode {
     FAILURE(-1, "Login Fail"),
     COURSE(100, "Show Course"),
     USER(200, "Get User"),
+    USERINFO(201, "Update User Info"),
     MEMORY(300, "Get MemoryData")
     ;
 
