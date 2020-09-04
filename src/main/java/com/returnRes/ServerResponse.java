@@ -1,5 +1,7 @@
 package com.returnRes;
 
+import org.springframework.web.bind.annotation.ResponseBody;
+
 public class ServerResponse<T> {
     private int code;
 
@@ -43,6 +45,10 @@ public class ServerResponse<T> {
 
     public static <T> ServerResponse<T> createUserResponse(T data){
         return new ServerResponse<T>(ResponseCode.USER.getCode(), ResponseCode.USER.getInfo(), data);
+    }
+
+    public static <T> ServerResponse<T> createUserInfoResponse(T data){
+        return new ServerResponse<T>(ResponseCode.USERINFO.getCode(), ResponseCode.USERINFO.getInfo(), data);
     }
 
     public static <T> ServerResponse<T> createMemoryResponse(T data){
