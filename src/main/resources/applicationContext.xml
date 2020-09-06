@@ -27,6 +27,7 @@
         <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
                 <!-- 注入数据源 -->
                 <property name="dataSource" ref="dataSource"/>
+                <property name="mapperLocations" value="mapper"
         </bean>
 
         <!-- 3. 扫描Dao接口所在包，扫描后用于创建Dao代理对象，把代理点对象放入IOC容器 -->
@@ -35,10 +36,5 @@
                 <property name="basePackage" value="com.dao"/>
         </bean>
 
-
-        <bean id="user" class="com.pojo.User"></bean>
-        <bean id="loginUser" class="com.pojo.LoginUser"></bean>
-        <bean id="course" class="com.pojo.Course"></bean>
-        <bean id="memoryData" class="com.pojo.MemoryData"></bean>
 
 </beans>
