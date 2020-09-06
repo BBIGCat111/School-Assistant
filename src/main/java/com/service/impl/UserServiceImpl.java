@@ -1,4 +1,4 @@
-package com.service.userServiceImpl;
+package com.service.impl;
 
 import com.pojo.User;
 import com.service.UserService;
@@ -11,12 +11,12 @@ public class UserServiceImpl implements UserService{
     @Autowired
     private UserDao userDao;
 
-    public User getUserById(String stu_id){
-        return userDao.getUserById(stu_id);
+    public User getUserById(String studentId){
+        return userDao.getUserById(studentId);
     }
 
-    public void updateUserInfoById(String stu_id, String stu_age, String stu_political, String stu_address
-            , String stu_profess, String stu_class, String stu_phone, String stu_email){
-        userDao.updateUserInfoById(stu_id, stu_age, stu_political, stu_address, stu_profess, stu_class, stu_phone, stu_email);
+    public void updateUserInfoById(String studentId, String studentAge, String studentPolitical, String studentAddress
+            , String studentProfess, String studentClass, String studentPhone, String studentEmail){
+        userDao.updateUserInfoById(studentId, studentAge, studentPolitical, studentAddress, studentProfess, studentClass, studentPhone, studentEmail);
     }
 }

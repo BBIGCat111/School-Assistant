@@ -11,7 +11,7 @@
  Target Server Version : 80017
  File Encoding         : 65001
 
- Date: 31/08/2020 20:52:18
+ Date: 04/09/2020 23:48:43
 */
 
 SET NAMES utf8mb4;
@@ -22,14 +22,14 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- ----------------------------
 DROP TABLE IF EXISTS `memory`;
 CREATE TABLE `memory`  (
-  `stu_id` varchar(12) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `studentId` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `memoryData` varchar(1000) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
-  PRIMARY KEY (`stu_id`) USING BTREE
+  PRIMARY KEY (`studentId`) USING BTREE
 ) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of memory
 -- ----------------------------
-INSERT INTO `memory` VALUES ('2220161451', '11111');
+INSERT INTO `memory` VALUES ('2220161451', '今天去唱歌');
 
 SET FOREIGN_KEY_CHECKS = 1;

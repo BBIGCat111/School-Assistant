@@ -3,7 +3,7 @@ package com.service;
 import com.pojo.MemoryData;
 
 public interface MemoryService {
-    public MemoryData getMemoryDataById(String stu_id);
+    MemoryData getMemoryDataById(String studentId);
 
-    public void setMemoryDataById(String stu_id, String memoryData);
+    void setMemoryDataById(String studentId, String memoryData);
 }

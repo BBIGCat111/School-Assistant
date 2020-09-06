@@ -29,17 +29,17 @@
                 url: "http://localhost:8080/project_war_exploded/home.co",
                 dataType: "json",
                 success: function (res) {
-                    if(res.code == 200){
-                        $("#stu_id").text(res.data.stu_id)
-                        $("#stu_name").text(res.data.stu_name)
-                        $("#stu_sex").text(res.data.stu_sex)
-                        $("#stu_age").text(res.data.stu_age)
-                        $("#stu_political").text(res.data.stu_political)
-                        $("#stu_address").text(res.data.stu_address)
-                        $("#stu_profess").text(res.data.stu_profess)
-                        $("#stu_class").text(res.data.stu_class)
-                        $("#stu_phone").text(res.data.stu_phone)
-                        $("#stu_email").text(res.data.stu_email)
+                    if(res.code == 0){
+                        $("#studentId").text(res.data.studentId)
+                        $("#studentName").text(res.data.studentName)
+                        $("#studentSex").text(res.data.studentSex)
+                        $("#studentAge").text(res.data.studentAge)
+                        $("#studentPolitical").text(res.data.studentPolitical)
+                        $("#studentAddress").text(res.data.studentAddress)
+                        $("#studentProfess").text(res.data.studentProfess)
+                        $("#studentClass").text(res.data.studentClass)
+                        $("#studentPhone").text(res.data.studentPhone)
+                        $("#studentEmail").text(res.data.studentEmail)
                     }
                 }
             });
@@ -348,43 +348,43 @@
                             <tbody>
                             <tr>
                                 <th>学号</th>
-                                <td id="stu_id"></td>
+                                <td id="studentId"></td>
                             </tr>
                             <tr>
                                 <th>姓名</th>
-                                <td id="stu_name"></td>
+                                <td id="studentName"></td>
                             </tr>
                             <tr>
                                 <th>性别</th>
-                                <td id="stu_sex"></td>
+                                <td id="studentSex"></td>
                             </tr>
                             <tr>
                                 <th>年龄</th>
-                                <td id="stu_age"></td>
+                                <td id="studentAge"></td>
                             </tr>
                             <tr>
                                 <th>政治面貌</th>
-                                <td id="stu_political"></td>
+                                <td id="studentPolitical"></td>
                             </tr>
                             <tr>
                                 <th>家庭住址</th>
-                                <td id="stu_address"></td>
+                                <td id="studentAddress"></td>
                             </tr>
                             <tr>
                                 <th>专业</th>
-                                <td id="stu_profess"></td>
+                                <td id="studentProfess"></td>
                             </tr>
                             <tr>
                                 <th>班级</th>
-                                <td id="stu_class"></td>
+                                <td id="studentClass"></td>
                             </tr>
                             <tr>
                                 <th>手机</th>
-                                <td id="stu_phone"></td>
+                                <td id="studentPhone"></td>
                             </tr>
                             <tr>
                                 <th>邮箱</th>
-                                <td id="stu_email"></td>
+                                <td id="studentEmail"></td>
                             </tr>
                             </tbody>
                         </table>

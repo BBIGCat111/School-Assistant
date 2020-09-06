@@ -9,12 +9,10 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDao {
     //返回用户数据
-    @Select("select * from user where stu_id = #{stu_id}")
-    public User getUserById(String stu_id);
+    User getUserById(String studentId);
 
     //修改用户数据
-    @Update("update user set stu_age = #{stu_age}, stu_political = #{stu_political}, stu_address = #{stu_address} , stu_profess = #{stu_profess}, stu_class = #{stu_profess}, stu_class = #{stu_class}, stu_phone = #{stu_phone}, stu_email = #{stu_email} where stu_id = #{stu_id}")
-    public void updateUserInfoById(@Param("stu_id") String stu_id, @Param("stu_age") String stu_age, @Param("stu_political") String stu_political, @Param("stu_address") String stu_address
-                        , @Param("stu_profess") String stu_profess, @Param("stu_class") String stu_class, @Param("stu_phone") String stu_phone
-                        , @Param("stu_email") String stu_email);
+    void updateUserInfoById(@Param("studentId") String studentId, @Param("studentAge") String studentAge, @Param("studentPolitical") String studentPolitical, @Param("studentAddress") String studentAddress
+                        , @Param("studentProfess") String studentProfess, @Param("studentClass") String studentClass, @Param("studentPhone") String studentPhone
+                        , @Param("studentEmail") String studentEmail);
 }

@@ -7,9 +7,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface CourseDao {
-
-    @Select("select * from course where stu_id = #{stu_id}")
-    public Course showCourse(@Param("stu_id") String stu_id);
+    //返回课程
+    Course showCourse(@Param("studentId") String studentId);
 
     
 }

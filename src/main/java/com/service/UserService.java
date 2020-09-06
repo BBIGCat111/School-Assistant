@@ -4,8 +4,8 @@ import com.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserService {
-    public User getUserById(String stu_id);
+    User getUserById(String studentId);
 
-    public void updateUserInfoById(String stu_id, String stu_age, String stu_political, String stu_address
-            , String stu_profess, String stu_class, String stu_phone, String stu_email);
+    void updateUserInfoById(String studentId, String studentAge, String studentPolitical, String studentAddress
+            , String studentProfess, String studentClass, String studentPhone, String studentEmail);
 }

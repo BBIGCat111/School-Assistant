@@ -1,15 +1,15 @@
 package com.pojo;
 
 public class MemoryData {
-    private String stu_id;
+    private String studentId;
     private String memoryData;
 
-    public String getStu_id() {
-        return stu_id;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setStu_id(String stu_id) {
-        this.stu_id = stu_id;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
     public String getMemoryData() {

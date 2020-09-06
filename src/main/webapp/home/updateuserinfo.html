@@ -24,20 +24,20 @@
     <script src="https://cdn.staticfile.org/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
     <script type="text/javascript">
         function requestJson () {
-            var stu_age = $("#stu_age").val()
-            var stu_political = $("#stu_political").val()
-            var stu_address = $("#stu_address").val()
-            var stu_profess = $("#stu_profess").val()
-            var stu_class = $("#stu_class").val()
-            var stu_phone = $("#stu_phone").val()
-            var stu_email = $("#stu_email").val()
+            var studentAge = $("#studentAge").val()
+            var studentPolitical = $("#studentPolitical").val()
+            var studentAddress = $("#studentAddress").val()
+            var studentProfess = $("#studentProfess").val()
+            var studentClass = $("#studentClass").val()
+            var studentPhone = $("#studentPhone").val()
+            var studentEmail = $("#studentEmail").val()
             $.ajax({
                 type: "post",
                 url: "http://localhost:8080/project_war_exploded/updateuserinfo.go",
                 dataType: "json",
-                data: {stu_age : stu_age, stu_political : stu_political, stu_address : stu_address, stu_profess : stu_profess, stu_class : stu_class, stu_phone : stu_phone, stu_email : stu_email},
+                data: {studentAge : studentAge, studentPolitical : studentPolitical, studentAddress : studentAddress, studentProfess : studentProfess, studentClass : studentClass, studentPhone : studentPhone, studentEmail : studentEmail},
                 success: function (res) {
-                    if(res.code == 201)
+                    if(res.code == 0)
                         window.location.href = "userinfo.html"
                 }
             });
@@ -339,13 +339,13 @@
                             -->
                             <div class="card-content">
                                 <form class="col s12" method="post">
-                                        <input placeholder="年龄" id="stu_age" type="text" >
-                                        <input placeholder="政治面貌" id="stu_political" type="text" >
-                                        <input placeholder="家庭住址" id="stu_address" type="text" >
-                                        <input placeholder="专业" id="stu_profess" type="text" >
-                                        <input placeholder="班级" id="stu_class" type="text" >
-                                        <input placeholder="手机" id="stu_phone" type="text" >
-                                        <input placeholder="邮箱" id="stu_email" type="text" >
+                                        <input placeholder="年龄" id="studentAge" type="text" >
+                                        <input placeholder="政治面貌" id="studentPolitical" type="text" >
+                                        <input placeholder="家庭住址" id="studentAddress" type="text" >
+                                        <input placeholder="专业" id="studentProfess" type="text" >
+                                        <input placeholder="班级" id="studentClass" type="text" >
+                                        <input placeholder="手机" id="studentPhone" type="text" >
+                                        <input placeholder="邮箱" id="studentEmail" type="text" >
                                         <input value="修改" type="button" class="btn" onclick="requestJson()">
                                 </form>
                                 <div class="clearBoth"></div>

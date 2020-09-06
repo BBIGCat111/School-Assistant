@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.dao.UserDao">
+    <resultMap id="userResultMap" type="com.pojo.User" >
+        <id column="studentId" jdbcType="VARCHAR" property="studentId" />
+        <result column="studentName" jdbcType="VARCHAR" property="studentName" />
+        <result column="studentSex" jdbcType="VARCHAR" property="studentSex" />
+        <result column="studentAge" jdbcType="VARCHAR" property="studentAge" />
+        <result column="studentPolitical" jdbcType="VARCHAR" property="studentPolitical" />
+        <result column="studentAddress" jdbcType="VARCHAR" property="studentAddress" />
+        <result column="studentProfess" jdbcType="VARCHAR" property="studentProfess" />
+        <result column="studentClass" jdbcType="VARCHAR" property="studentClass" />
+        <result column="studentPhone" jdbcType="VARCHAR" property="studentPhone" />
+        <result column="studentEmail" jdbcType="VARCHAR" property="studentEmail" />
+    </resultMap>
+
+    <select id="getUserById" parameterType="String" resultMap="userResultMap" >
+        select * from user where studentId = #{studentId}
+    </select>
+
+    <update id="updateUserInfoById" parameterType="String" >
+        update user set studentAge = #{studentAge}, studentPolitical = #{studentPolitical}, studentAddress = #{studentAddress} , studentProfess = #{studentProfess}, studentClass = #{studentProfess}, studentClass = #{studentClass}, studentPhone = #{studentPhone}, studentEmail = #{studentEmail} where studentId = #{studentId}
+    </update>
+</mapper>

@@ -5,10 +5,10 @@
 
 <mapper namespace="com.dao.LoginDao">
     <resultMap id="loginUserResultMap" type="com.pojo.LoginUser">
-        <id column="studentId" javaType="VARCHAR" property="studentId" />
-        <result column="studentName" javaType="VARCHAR" property="studentName" />
-        <result column="username" javaType="VARCHAR" property="username" />
-        <result column="password" javaType="VARCHAR" property="password" />
+        <id column="studentId" jdbcType="VARCHAR" property="studentId" />
+        <result column="studentName" jdbcType="VARCHAR" property="studentName" />
+        <result column="username" jdbcType="VARCHAR" property="username" />
+        <result column="password" jdbcType="VARCHAR" property="password" />
     </resultMap>
 
     <select id="findLoginUser" parameterType="String" resultType="String">

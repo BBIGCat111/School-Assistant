@@ -2,14 +2,11 @@ package com.controller;
 
 import com.pojo.Course;
 import com.service.CourserService;
-import com.returnRes.ServerResponse;
+import com.common.ServerResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.context.request.RequestAttributes;
-import org.springframework.web.context.request.RequestContextHolder;
-import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -21,12 +18,12 @@ public class CourseController {
     //显示课表
     @RequestMapping("/course.do")
     @ResponseBody
-    public ServerResponse<Course> showCourse(){
+    public ServerResponse<Course> showCourse(HttpServletRequest request){
         //获取sesson
-        RequestAttributes ra = RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = ((ServletRequestAttributes)ra).getRequest();
-        String stu_id = (String) request.getSession(true).getAttribute("stu_id");
+        String studentId = (String) request.getSession(true).getAttribute("studentId");
 
-        return ServerResponse.createCourseResponse(courserService.showCourse(stu_id));
+        Course course = courserService.showCourse(studentId);
+
+        return ServerResponse.createSuccessResponse(course);
     }
 }

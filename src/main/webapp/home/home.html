@@ -29,11 +29,11 @@
                 url: "http://localhost:8080/project_war_exploded/home.co",
                 dataType: "json",
                 success: function (res) {
-                    if(res.code == 200){
-                        $("#stu_id").text(res.data.stu_id)
-                        $("#stu_name").text(res.data.stu_name)
-                        $("#stu_profess").text(res.data.stu_profess)
-                        $("#stu_class").text(res.data.stu_class)
+                    if(res.code == 0){
+                        $("#studentId").text(res.data.studentId)
+                        $("#studentName").text(res.data.studentName)
+                        $("#studentProfess").text(res.data.studentProfess)
+                        $("#studentClass").text(res.data.studentClass)
                     }
                 }
             });
@@ -340,7 +340,7 @@
                                     <h3>学号</h3>
                                 </div>
                                 <div class="card-action">
-                                    <strong id="stu_id"></strong>
+                                    <strong id="studentId"></strong>
                                 </div>
                             </div>
                         </div>
@@ -355,7 +355,7 @@
                                     <h3>姓名</h3>
                                 </div>
                                 <div class="card-action">
-                                    <strong id="stu_name"></strong>
+                                    <strong id="studentName"></strong>
                                 </div>
                             </div>
                         </div>
@@ -369,7 +369,7 @@
                                     <h3>专业</h3>
                                 </div>
                                 <div class="card-action">
-                                    <strong id="stu_profess"></strong>
+                                    <strong id="studentProfess"></strong>
                                 </div>
                             </div>
                         </div>
@@ -383,7 +383,7 @@
                                     <h3>班级</h3>
                                 </div>
                                 <div class="card-action">
-                                    <strong id="stu_class"></strong>
+                                    <strong id="studentClass"></strong>
                                 </div>
                             </div>
                         </div>

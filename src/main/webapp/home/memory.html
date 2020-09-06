@@ -29,7 +29,7 @@
                 url: "http://localhost:8080/project_war_exploded/memory.eo",
                 dataType: "json",
                 success: function (res) {
-                    if(res.code == 300){
+                    if(res.code == 0){
                         $("#newMemoryData").text(res.data.memoryData)
                     }
                 }
@@ -43,7 +43,7 @@
                 dataType: "json",
                 data: {newMemoryData : newMemoryData},
                 success: function (res) {
-                    if(res.code == 300){
+                    if(res.code == 0){
                         //$("#newMemoryData").text(res.data.memoryData)
                         window.location.href = "memory.html"
                     }

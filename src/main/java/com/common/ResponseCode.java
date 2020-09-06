@@ -1,12 +1,9 @@
-package com.returnRes;
+package com.common;
 
 public enum  ResponseCode {
-    SUCCESS(0, "Login Success"),
-    FAILURE(-1, "Login Fail"),
-    COURSE(100, "Show Course"),
-    USER(200, "Get User"),
-    USERINFO(201, "Update User Info"),
-    MEMORY(300, "Get MemoryData")
+    SUCCESS(0, "response success"),
+    LOGINFAILURE(-1, "username and password are wrong")
+
     ;
 
     private int code;

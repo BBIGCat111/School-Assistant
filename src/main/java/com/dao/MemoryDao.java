@@ -7,9 +7,9 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MemoryDao {
-    @Select("select * from memory where stu_id = #{stu_id}")
-    public MemoryData getMemoryDataById(String stu_id);
+    //返回备忘录数据
+    MemoryData getMemoryDataById(String studentId);
 
-    @Select("update memory set memoryData = #{memoryData} where stu_id = #{stu_id}")
-    public void setMemoryDataById(@Param("stu_id") String stu_id, @Param("memoryData") String memoryData);
+    //设置备忘录数据
+    void setMemoryDataById(@Param("studentId") String studentId, @Param("memoryData") String memoryData);
 }

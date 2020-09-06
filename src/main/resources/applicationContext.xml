@@ -27,7 +27,9 @@
         <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
                 <!-- 注入数据源 -->
                 <property name="dataSource" ref="dataSource"/>
-                <property name="mapperLocations" value="mapper"
+                <!-- 加载loginDaoSql mapper 配置文件 -->
+                <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
+
         </bean>
 
         <!-- 3. 扫描Dao接口所在包，扫描后用于创建Dao代理对象，把代理点对象放入IOC容器 -->

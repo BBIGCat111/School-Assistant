@@ -1,4 +1,4 @@
-package com.service.memoryServiceImpl;
+package com.service.impl;
 
 import com.pojo.MemoryData;
 import com.service.MemoryService;
@@ -11,9 +11,9 @@ public class MemoryServiceImpl implements MemoryService {
     @Autowired
     private MemoryDao memoryDao;
 
-    public MemoryData getMemoryDataById(String stu_id){
-        return memoryDao.getMemoryDataById(stu_id);
+    public MemoryData getMemoryDataById(String studentId){
+        return memoryDao.getMemoryDataById(studentId);
     }
 
-    public void setMemoryDataById(String stu_id, String memoryData) { memoryDao.setMemoryDataById(stu_id, memoryData); }
+    public void setMemoryDataById(String studentId, String memoryData) { memoryDao.setMemoryDataById(studentId, memoryData); }
 }

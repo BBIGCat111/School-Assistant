@@ -1,94 +1,95 @@
 package com.pojo;
 
 public class User {
-    private String stu_id;
-    private String stu_name;
-    private String stu_sex;
-    private String stu_age;
-    private String stu_political;
-    private String stu_address;
-    private String stu_profess;
-    private String stu_class;
-    private String stu_phone;
-    private String stu_email;
+    private String studentId;
+    private String studentName;
+    private String studentSex;
+    private String studentAge;
+    private String studentPolitical;
+    private String studentAddress;
+    private String studentProfess;
+    private String studentClass;
+    private String studentPhone;
+    private String studentEmail;
 
-    public String getStu_id() {
-        return stu_id;
+    public String getStudentId() {
+        return studentId;
     }
 
-    public void setStu_id(String stu_id) {
-        this.stu_id = stu_id;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
-    public String getStu_name() {
-        return stu_name;
+    public String getStudentName() {
+        return studentName;
     }
 
-    public void setStu_name(String stu_name) {
-        this.stu_name = stu_name;
+    public void setStudentName(String studentName) {
+        this.studentName = studentName;
     }
 
-    public String getStu_sex() {
-        return stu_sex;
+    public String getStudentSex() {
+        return studentSex;
     }
 
-    public void setStu_sex(String stu_sex) {
-        this.stu_sex = stu_sex;
+    public void setStudentSex(String studentSex) {
+        this.studentSex = studentSex;
     }
 
-    public String getStu_age() {
-        return stu_age;
+    public String getStudentAge() {
+        return studentAge;
     }
 
-    public void setStu_age(String stu_age) {
-        this.stu_age = stu_age;
+    public void setStudentAge(String studentAge) {
+        this.studentAge = studentAge;
     }
 
-    public String getStu_political() {
-        return stu_political;
+    public String getStudentPolitical() {
+        return studentPolitical;
     }
 
-    public void setStu_political(String stu_political) {
-        this.stu_political = stu_political;
+    public void setStudentPolitical(String studentPolitical) {
+        this.studentPolitical = studentPolitical;
     }
 
-    public String getStu_address() {
-        return stu_address;
+    public String getStudentAddress() {
+        return studentAddress;
     }
 
-    public void setStu_address(String stu_address) {
-        this.stu_address = stu_address;
+    public void setStudentAddress(String studentAddress) {
+        this.studentAddress = studentAddress;
     }
 
-    public String getStu_profess() {
-        return stu_profess;
+    public String getStudentProfess() {
+        return studentProfess;
     }
 
-    public void setStu_profess(String stu_profess) {
-        this.stu_profess = stu_profess;
+    public void setStudentProfess(String studentProfess) {
+        this.studentProfess = studentProfess;
     }
 
-    public String getStu_class() {
-        return stu_class;
+    public String getStudentClass() {
+        return studentClass;
     }
 
-    public void setStu_class(String stu_class) {
-        this.stu_class = stu_class;
+    public void setStudentClass(String studentClass) {
+        this.studentClass = studentClass;
     }
 
-    public String getStu_phone() {
-        return stu_phone;
+    public String getStudentPhone() {
+        return studentPhone;
     }
 
-    public void setStu_phone(String stu_phone) {
-        this.stu_phone = stu_phone;
+    public void setStudentPhone(String studentPhone) {
+        this.studentPhone = studentPhone;
     }
 
-    public String getStu_email() {
-        return stu_email;
+    public String getStudentEmail() {
+        return studentEmail;
     }
 
-    public void setStu_email(String stu_email) {
-        this.stu_email = stu_email;
+    public void setStudentEmail(String studentEmail) {
+        this.studentEmail = studentEmail;
     }
+
 }
