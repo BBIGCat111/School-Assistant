@@ -10,7 +10,7 @@
     </resultMap>
 
     <select id="getMemoryDataById" parameterType="String" resultMap="memoryDataResultMap" >
-        select * from memory where studentId = #{studentId}
+        select studentId, memoryData from memory where studentId = #{studentId}
     </select>
 
     <update id="setMemoryDataById" parameterType="String" >

@@ -18,7 +18,7 @@
     </resultMap>
 
     <select id="getUserById" parameterType="String" resultMap="userResultMap" >
-        select * from user where studentId = #{studentId}
+        select studentId, studentName, studentSex, studentAge, studentPolitical, studentAddress, studentProfess, studentClass, studentPhone, studentEmail from user where studentId = #{studentId}
     </select>
 
     <update id="updateUserInfoById" parameterType="String" >

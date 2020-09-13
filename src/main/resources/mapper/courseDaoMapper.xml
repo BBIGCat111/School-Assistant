@@ -5,6 +5,6 @@
 
 <mapper namespace="com.dao.CourseDao">
     <select id="showCourse" parameterType="String" resultType="com.pojo.Course">
-        select * from course where studentId = #{studentId}
+        select  studentId, day1Course1, day1Course2, day1Course3, day1Course4, day1Course5, day2Course1, day2Course2, day2Course3, day2Course4, day2Course5, day3Course1, day3Course2, day3Course3, day3Course4, day3Course5, day4Course1, day4Course2, day4Course3, day4Course4, day4Course5, day5Course1, day5Course2, day5Course3, day5Course4, day5Course5 from course where studentId = #{studentId}
     </select>
 </mapper>

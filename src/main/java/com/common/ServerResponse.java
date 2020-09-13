@@ -25,10 +25,6 @@ public class ServerResponse<T> {
         return data;
     }
 
-    public static <T> ServerResponse<T> createResponse(int code, String info, T data){
-        return new ServerResponse<T>(code, info, data);
-    }
-
     public static <T> ServerResponse<T> createSuccessResponse(T data){
         return new ServerResponse<T>(ResponseCode.SUCCESS.getCode(), ResponseCode.SUCCESS.getInfo(), data);
     }
