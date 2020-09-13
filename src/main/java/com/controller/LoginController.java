@@ -21,10 +21,9 @@ public class LoginController {
     @RequestMapping("/login")
     @ResponseBody
     public ServerResponse<LoginUser> findAllUser(@RequestParam("username") String username, @RequestParam("password") String password, HttpServletRequest request){
-        //设置sesson
-        request.getSession(true).setAttribute("studentId", username);
-
         if(loginService.findLoginUser(username, password).equals(username)){
+            //假如登录成功，设置sesson
+            request.getSession(true).setAttribute("studentId", username);
             return ServerResponse.createSuccessResponse(null);           //登录成功
         }
         return ServerResponse.createLoginFailResponse();                 //登录失败
