@@ -33,7 +33,7 @@
             var studentEmail = $("#studentEmail").val()
             $.ajax({
                 type: "post",
-                url: "http://localhost:8080/project_war_exploded/updateuserinfo.go",
+                url: "http://localhost:8080/project_war_exploded/updateuserinfo",
                 dataType: "json",
                 data: {studentAge : studentAge, studentPolitical : studentPolitical, studentAddress : studentAddress, studentProfess : studentProfess, studentClass : studentClass, studentPhone : studentPhone, studentEmail : studentEmail},
                 success: function (res) {

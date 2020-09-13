@@ -15,7 +15,7 @@ public class UserInfoController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("user.fo")
+    @RequestMapping("user")
     @ResponseBody
     public ServerResponse<User> getUserInfoById(HttpServletRequest request){
         //获取sesson

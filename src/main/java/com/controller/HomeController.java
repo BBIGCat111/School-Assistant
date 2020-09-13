@@ -15,7 +15,7 @@ public class HomeController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/home.co")
+    @RequestMapping("/home")
     @ResponseBody
     public ServerResponse<User> getUserById(HttpServletRequest request){
 

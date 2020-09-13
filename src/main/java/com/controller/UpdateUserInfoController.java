@@ -15,7 +15,7 @@ public class UpdateUserInfoController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("/updateuserinfo.go")
+    @RequestMapping("/updateuserinfo")
     @ResponseBody
     public ServerResponse<User> updateUserInfoById(String studentAge, String studentPolitical, String studentAddress
             , String studentProfess, String studentClass, String studentPhone, String studentEmail, HttpServletRequest request){

@@ -15,7 +15,7 @@ public class MemoryController {
     @Autowired
     private MemoryService memoryService;
 
-    @RequestMapping("/memory.eo")
+    @RequestMapping("/memory")
     @ResponseBody
     public ServerResponse<MemoryData> getMemoryDataById(String newMemoryData, HttpServletRequest request){
 

@@ -16,7 +16,7 @@ public class CourseController {
     private CourserService courserService;
 
     //显示课表
-    @RequestMapping("/course.do")
+    @RequestMapping("/course")
     @ResponseBody
     public ServerResponse<Course> showCourse(HttpServletRequest request){
         //获取sesson

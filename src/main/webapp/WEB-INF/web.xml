@@ -32,78 +32,19 @@
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
 
+
   <servlet>
-    <servlet-name>LoginController</servlet-name>
+    <servlet-name>Controller</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
     <init-param>
       <param-name>contextConfigLocation</param-name>
       <param-value>classpath:Controller-mvc.xml</param-value>
     </init-param>
   </servlet>
-  <servlet>
-    <servlet-name>CourseController</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:Controller-mvc.xml</param-value>
-    </init-param>
-  </servlet>
-  <servlet>
-    <servlet-name>HomeController</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:Controller-mvc.xml</param-value>
-    </init-param>
-  </servlet>
-  <servlet>
-    <servlet-name>MemoryController</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:Controller-mvc.xml</param-value>
-    </init-param>
-  </servlet>
-  <servlet>
-    <servlet-name>UserInfoController</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:Controller-mvc.xml</param-value>
-    </init-param>
-  </servlet>
-  <servlet>
-    <servlet-name>UpdateUserInfoController</servlet-name>
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-    <init-param>
-      <param-name>contextConfigLocation</param-name>
-      <param-value>classpath:Controller-mvc.xml</param-value>
-    </init-param>
-  </servlet>
-  
   <servlet-mapping>
-    <servlet-name>LoginController</servlet-name>
+    <servlet-name>Controller</servlet-name>
     <url-pattern>/*</url-pattern>
   </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>CourseController</servlet-name>
-    <url-pattern>/.do</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>HomeController</servlet-name>
-    <url-pattern>/.co</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>MemoryController</servlet-name>
-    <url-pattern>/.eo</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>UserInfoController</servlet-name>
-    <url-pattern>/.fo</url-pattern>
-  </servlet-mapping>
-  <servlet-mapping>
-    <servlet-name>UpdateUserInfoController</servlet-name>
-    <url-pattern>/.go</url-pattern>
-  </servlet-mapping>
+
 
 </web-app>
